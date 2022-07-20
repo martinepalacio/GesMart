@@ -1,0 +1,22 @@
+.login{
+    margin: 70px auto;
+    width: max-content;
+    -webkit-box-shadow: 7px 9px 14px -7px rgba(0,0,0,0.59);
+    -moz-box-shadow: 7px 9px 14px -7px rgba(0,0,0,0.59);
+    box-shadow: 7px 9px 14px -7px rgba(0,0,0,0.59);
+    border: 0.5px solid grey;
+    padding: 30px;
+    display: flex;
+}
+.logo {
+    color:cornflowerblue;
+    border: 1px solid black;
+    width: max-content;
+    padding: 5px;
+    text-align: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkblue;
+}
+.logo span {
+    color: white;
+}
