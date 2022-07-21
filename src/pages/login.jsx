@@ -1,10 +1,11 @@
  import "../style.css";
+ import Logo from './components/logo'
 
  const Login = () => {
 
     return <div className="container-sm login">
     <form >
-      <p className="logo">Ges<span>Mart</span></p>
+      <Logo/>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Usuario</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
