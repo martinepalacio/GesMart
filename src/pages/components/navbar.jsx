@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Logo from './logo'
 
 
@@ -7,22 +7,22 @@ function Navbar() {
 
   return (
     <div>
-        <div className='logos'>
-            <Logo></Logo>
-            <button type="button" class="btn btn-danger">Logout</button>
-        </div>
-    <ul class="nav nav-tabs nav-fill">
-  <li class="nav-item">
-    <Link class="nav-link active" to="/main">Active</Link>
-  </li>
-  <li class="nav-item">
-    <Link class="nav-link" to="/clientes" aria-current="page">Clientes</Link>
-  </li>
-  <li class="nav-item">
-    <Link class="nav-link" to="/saldos">Saldos</Link>
-  </li>
-</ul>
-</div>
+      <div className='logos'>
+        <Logo></Logo>
+        <button type="button" className="btn btn-danger">Logout</button>
+      </div>
+      <ul className="nav nav-tabs nav-fill">
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/main" activeClassName="active">Home</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/clientes" aria-current="page" activeClassName="active">Clientes</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/saldos" activeClassName="active">Saldos</NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }
 

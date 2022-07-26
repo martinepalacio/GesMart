@@ -3,7 +3,7 @@
 
  const Login = () => {
 
-    return <div className="container-sm login">
+    return <div className="login">
     <form >
       <Logo/>
     <div class="mb-3">
@@ -15,7 +15,7 @@
       <input type="password" class="form-control" id="exampleInputPassword1" />
     </div>
   
-    <button onClick={() => window.location.replace("http://stackoverflow.com")} type="submit" class="btn btn-primary">Submit</button>
+    <button onClick={() => window.location.replace("http://stackoverflow.com")} type="submit" class="btn btn-primary">Entrar</button>
   </form>
   </div>
  }
