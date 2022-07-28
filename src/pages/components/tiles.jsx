@@ -4,7 +4,7 @@ const Tiles = (props) => {
 
   return (
     <div className='tiles'>
-        <p>{props.title}</p>
+        <p>{props.title} {props.dateM}</p>
         <p>{props.number}</p>
     </div>
   )

@@ -78,6 +78,24 @@
     gap: 10px;
     
 }
-.tablaClienteNombre {
-
+.clientes {
+    max-width: 700px;
+    margin: auto;
+    align-items: center;
+}
+.listaItems{
+    min-width: 100px;
+    width: max-content;
+    margin: 10px 0px
+}
+.listaClientes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.listaTitle {
+    font-size: 10px;
+    font-weight: 800;
 }
