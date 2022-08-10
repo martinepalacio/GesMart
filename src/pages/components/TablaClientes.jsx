@@ -2,6 +2,7 @@ import React from 'react'
 import DropButton from './DropButton'
 import { useState } from 'react'
 import pruebaclientes from '../../pruebaClientes.json'
+import { Link } from 'react-router-dom'
 
 const TablaClientes = (props) => {
     const [search, setSearch] = useState("");
@@ -21,9 +22,9 @@ const TablaClientes = (props) => {
                 return(
                     <div key={e.cuit} className='tabla clientes'>
                         <div className='listaClientes'>
-                            <div className='listaItems'>
+                            <Link className='listaItems' to="/clientes/#">
                                 {e.nombre} {e.apellido}
-                            </div>
+                            </Link>
                             <div>
                             <span className='listaTitle'>Cuit</span> {e.cuit}
                             </div>

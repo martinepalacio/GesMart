@@ -1,19 +1,34 @@
-import React from 'react'
-import ModalAdd from './Modal'
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-const Button = (props) => {
+const ButtonAdd = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="d-grid gap-2 col-6 mx-auto buttonAdd">
-        <button 
-        data-bs-toggle="modal" 
-        data-bs-target="#Modal" 
-        className="btn btn-primary" 
-        type="button">
-          {props.title}
-          </button>
-        <ModalAdd/>    
-    </div>
-  )
-}
+      <Button variant="primary" onClick={handleShow}>
+        + Nuevo Cliente
+      </Button>
 
-export default Button
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Nuevo cliente</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
+}
+export default ButtonAdd
