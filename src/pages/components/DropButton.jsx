@@ -2,7 +2,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-function DropButton() {
+function DropButton(props) {
   return (
     <>
       <div>
@@ -15,7 +15,7 @@ function DropButton() {
             variant="secondary"
             title="Acciones"
           >
-            <Dropdown.Item eventKey="1">Modificar</Dropdown.Item>
+            <Dropdown.Item onClick={props.handleShow} eventKey="1">Modificar</Dropdown.Item>
             <Dropdown.Item eventKey="2">Activar/Desactivar</Dropdown.Item>
             <Dropdown.Item eventKey="3">Cambiar clave fiscal</Dropdown.Item>
           </DropdownType>

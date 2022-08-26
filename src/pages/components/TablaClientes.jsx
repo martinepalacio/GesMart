@@ -2,10 +2,13 @@ import React from 'react'
 import DropButton from './DropButton'
 import { useState } from 'react'
 import pruebaclientes from '../../pruebaClientes.json'
-import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
+
 
 const TablaClientes = (props) => {
     const [search, setSearch] = useState("");
+
+    
   return (
     <div>
         <div className="d-grid gap-2 col-6 mx-auto">
@@ -22,9 +25,9 @@ const TablaClientes = (props) => {
                 return(
                     <div key={e.cuit} className='tabla clientes'>
                         <div className='listaClientes'>
-                            <Link className='listaItems' to="/clientes/#">
+                            <Button className='listaItems' variant="outline-primary" onClick={props.handleShow}>
                                 {e.nombre} {e.apellido}
-                            </Link>
+                            </Button>
                             <div>
                             <span className='listaTitle'>Cuit</span> {e.cuit}
                             </div>
@@ -32,7 +35,7 @@ const TablaClientes = (props) => {
                             <span className='listaTitle'>Clave fiscal</span> {e.claveAfip} / {e.claveArba}
                             </div>
                         </div>
-                        <DropButton/>    
+                        <DropButton handleShow={props.handleShow} handleClose={props.handleClose}/>    
                     </div>
             )}
         )}
